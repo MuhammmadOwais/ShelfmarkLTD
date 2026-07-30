@@ -23,11 +23,11 @@ const CategoryPage = ({ categorySlug, setView, setSelectedProduct, handleAddToCa
   // Set Page Title & Meta Description dynamically for SEO
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = `${categoryInfo.name} ShelfMarkLTD`;
+    document.title = `${categoryInfo.name} Wholesale UK | Top England Supplier — Shelfmark Ltd`;
 
     let metaDesc = document.querySelector('meta[name="description"]');
     const originalDesc = metaDesc ? metaDesc.getAttribute('content') : '';
-    const newDescText = `Discover premium products at Shelfmark with quality, great prices, and fast delivery. Shop trusted brands across a wide range of categories and enjoy a secure online shopping experience.`;
+    const newDescText = `Shop ${categoryInfo.name} B2B wholesale supply from Shelfmark Ltd (shelfmarkltd), a top England corporate supplier in Wolverhampton. Fast UK mainland dispatch.`;
 
     if (metaDesc) {
       metaDesc.setAttribute('content', newDescText);

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Mail } from 'lucide-react';
 import { CATEGORIES_DATA } from '../data/categories';
 
-const Footer = ({ logoUrl, onPrivacyClick, onTermsClick, onRefundClick, onAboutClick, onContactClick, onCategoryClick }) => {
+const Footer = ({ logoUrl, onPrivacyClick, onTermsClick, onRefundClick, onAboutClick, onContactClick, onCategoryClick, onHomeClick, onPrivateLabelClick }) => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSuccess, setNewsletterSuccess] = useState('');
   const [newsletterError, setNewsletterError] = useState('');
@@ -42,7 +42,7 @@ const Footer = ({ logoUrl, onPrivacyClick, onTermsClick, onRefundClick, onAboutC
       <div className="py-8 md:py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
 
-          {/* 1. BRAND COLUMN (Span 4 on desktop, compact on mobile) */}
+          {/* 1. BRAND COLUMN */}
           <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left space-y-3.5">
             {logoUrl ? (
               <img src={logoUrl} alt="Shelfmark Logo" className="h-9 object-contain mx-auto md:mx-0" onError={(e) => { e.target.style.display = 'none'; }} />
@@ -56,7 +56,7 @@ const Footer = ({ logoUrl, onPrivacyClick, onTermsClick, onRefundClick, onAboutC
 
           </div>
 
-          {/* 2. PAGES & CATEGORIES IN 2 SIDE-BY-SIDE COLUMNS ON MOBILE (Span 5 on desktop) */}
+          {/* 2. PAGES & CATEGORIES */}
           <div className="md:col-span-5 grid grid-cols-2 gap-4 text-left">
             
             {/* Left Column: Company & Legal Pages */}
@@ -66,6 +66,11 @@ const Footer = ({ logoUrl, onPrivacyClick, onTermsClick, onRefundClick, onAboutC
                 <li>
                   <a href="/" onClick={(e) => { e.preventDefault(); if (onHomeClick) onHomeClick(); else if (onCategoryClick) onCategoryClick('All'); }} className="hover:text-white transition-colors cursor-pointer font-medium block py-0.5">
                     Home Page
+                  </a>
+                </li>
+                <li>
+                  <a href="/private-label" onClick={(e) => { e.preventDefault(); if (onPrivateLabelClick) onPrivateLabelClick(); }} className="hover:text-white transition-colors cursor-pointer font-medium block py-0.5 text-amber-400">
+                    Private Label &amp; Wholesale
                   </a>
                 </li>
                 <li>

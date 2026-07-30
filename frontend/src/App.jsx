@@ -17,6 +17,7 @@ import RefundPolicy from './pages/RefundPolicy';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import CategoryPage from './pages/CategoryPage';
+import PrivateLabelPage from './pages/PrivateLabelPage';
 import { CATEGORY_PRODUCTS } from './data/categories';
 
 // BRAND CONFIGURATION - ENTER YOUR LOGO / ASSET LINKS HERE
@@ -161,6 +162,8 @@ function App() {
         window.history.pushState({}, '', '/about');
       } else if (newView === 'contact') {
         window.history.pushState({}, '', '/contact');
+      } else if (newView === 'privatelabel') {
+        window.history.pushState({}, '', '/private-label');
       } else if (newView === 'cart') {
         window.history.pushState({}, '', '/cart');
       } else if (newView === 'checkout') {
@@ -200,7 +203,10 @@ function App() {
         return { view: 'about', cat: 'All' };
       } else if (path.includes('contact') || hash.includes('contact')) {
         return { view: 'contact', cat: 'All' };
+      } else if (path.includes('private-label') || hash.includes('private-label')) {
+        return { view: 'privatelabel', cat: 'All' };
       } else if (path.includes('cart') || hash.includes('cart')) {
+        return { view: 'cart', cat: 'All' };
         return { view: 'cart', cat: 'All' };
       } else if (path.includes('checkout') || hash.includes('checkout')) {
         return { view: 'checkout', cat: 'All' };

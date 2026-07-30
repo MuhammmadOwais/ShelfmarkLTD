@@ -9,11 +9,11 @@ const IMG_DELIVERY = "https://res.cloudinary.com/sfjl53dg/image/upload/v17848536
 const AboutPage = ({ setView }) => {
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = "About Shelfmark Ltd | Your Trusted Online Shopping Destination";
+    document.title = "About Shelfmark Ltd | Top Corporate England Wholesaler & E-Commerce Entity";
 
     let metaDesc = document.querySelector('meta[name="description"]');
     const originalDesc = metaDesc ? metaDesc.getAttribute('content') : '';
-    const newDescText = "Learn about Shelfmark Ltd, our mission, values, and commitment to delivering quality products, secure online shopping, and excellent customer service.";
+    const newDescText = "Learn about Shelfmark Ltd (shelfmarkltd), a top corporate England entity, premier UK wholesale supplier, and private label manufacturer based in Wolverhampton.";
 
     if (metaDesc) {
       metaDesc.setAttribute('content', newDescText);

@@ -35,6 +35,10 @@ const ShopPage = ({
   const itemsPerPage = 4;
   const totalSlides = Math.ceil(CATEGORIES_DATA.length / itemsPerPage);
 
+  useEffect(() => {
+    document.title = "Shelfmark Ltd — Top England Corporate Website, Premier UK Wholesaler & E-Commerce Store";
+  }, []);
+
   const handleNextSlide = () => {
     setSliderIndex((prev) => (prev + 1) % totalSlides);
   };
@@ -267,51 +271,7 @@ const ShopPage = ({
 
       </div>
 
-      {/* ─────── UK B2B WHOLESALE & PRIVATE LABEL HUB BANNER ─────── */}
-      <section className="max-w-7xl mx-auto my-12 px-6">
-        <div className="bg-[#071527] text-white rounded-xl p-8 md:p-12 shadow-xl border border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-8 space-y-4 text-left">
-            <span className="bg-slate-800 text-white text-[10px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-sm inline-block">
-              UK Trade &amp; Private Label Division
-            </span>
-            <h3 className="text-2xl md:text-4xl font-black text-white tracking-tight">
-              Looking for UK Wholesale Supply or Private Label Manufacturing?
-            </h3>
-            <p className="text-xs md:text-sm text-slate-300 max-w-2xl leading-relaxed">
-              Shelfmark LTD works directly with UK trade buyers, retailers, and e-commerce brands for bulk wholesale distribution and customized private label product manufacturing. Contact our dedicated trade team today.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-2 text-xs font-bold text-slate-300">
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                <span>Bulk Volume Pricing</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                <span>Custom Private Label Branding</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                <span>UK Dispatch from Wolverhampton</span>
-              </span>
-            </div>
-          </div>
 
-          <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-center space-y-3">
-            <button
-              onClick={() => setView('contact')}
-              className="w-full sm:w-auto px-6 py-3.5 bg-white text-slate-950 hover:bg-slate-200 font-black text-xs uppercase tracking-wider rounded-md transition-all shadow-md cursor-pointer text-center"
-            >
-              Request Wholesale Quote
-            </button>
-            <a
-              href="tel:+447460013637"
-              className="w-full sm:w-auto px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-md border border-slate-700 transition-all cursor-pointer text-center"
-            >
-              📞 Call +44 7460013637
-            </a>
-          </div>
-        </div>
-      </section>
 
 
     </div>

@@ -26,7 +26,8 @@ const Navbar = ({
   products,
   onProductClick,
   onAboutClick,
-  onContactClick
+  onContactClick,
+  onPrivateLabelClick
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchVal, setSearchVal] = useState('');
@@ -395,6 +396,15 @@ const Navbar = ({
               All Departments
             </button>
 
+            <button
+              onClick={() => {
+                if (onPrivateLabelClick) onPrivateLabelClick();
+              }}
+              className="shrink-0 text-amber-300 hover:text-white transition-colors cursor-pointer font-black whitespace-nowrap bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30"
+            >
+              PRIVATE LABEL &amp; WHOLESALE
+            </button>
+
             {CATEGORIES_DATA.map((cat) => {
               const isActive = selectedCategory === cat.slug || selectedCategory === cat.name;
               return (
@@ -534,6 +544,7 @@ const Navbar = ({
                 Company &amp; Legal
               </h4>
               <div className="space-y-2 text-xs text-slate-300 font-bold">
+                <button onClick={() => { if (onPrivateLabelClick) onPrivateLabelClick(); setIsOpen(false); }} className="block text-amber-400 font-black hover:text-white py-1.5 w-full text-left">Private Label &amp; Wholesale</button>
                 <button onClick={() => { if (onAboutClick) onAboutClick(); setIsOpen(false); }} className="block hover:text-white py-1.5 w-full text-left">About Us</button>
                 <button onClick={() => { if (onContactClick) onContactClick(); setIsOpen(false); }} className="block hover:text-white py-1.5 w-full text-left">Contact Us &amp; Trade Inquiry</button>
               </div>

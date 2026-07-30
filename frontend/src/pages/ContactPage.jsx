@@ -16,11 +16,11 @@ const ContactPage = ({ setView }) => {
 
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = "Contact Shelfmark Ltd | UK Corporate Office & Trade Inquiry";
+    document.title = "Contact Shelfmark Ltd | Top UK Wholesale & Private Label Headquarters";
 
     let metaDesc = document.querySelector('meta[name="description"]');
     const originalDesc = metaDesc ? metaDesc.getAttribute('content') : '';
-    const newDescText = "Contact Shelfmark Ltd UK headquarters for customer support, trade account applications, private label manufacturing quotes, or wholesale distribution inquiries. Call +44 7460013637.";
+    const newDescText = "Contact Shelfmark Ltd (shelfmarkltd) UK headquarters for B2B trade inquiries, private label manufacturing quotes, and Wolverhampton wholesale distribution. Call +44 7460013637.";
 
     if (metaDesc) {
       metaDesc.setAttribute('content', newDescText);

@@ -13,7 +13,7 @@ export const CATEGORIES_DATA = [
     id: 'fashion',
     name: 'Fashion',
     slug: 'fashion',
-    image: 'https://res.cloudinary.com/sfjl53dg/image/upload/v1784848828/fashion_1_yormlj.webp',
+    image: 'https://res.cloudinary.com/sfjl53dg/image/upload/v1785439171/fashion5_h5htpk.jpg',
     icon: '👕',
     description: 'Trending apparel, designer footwear, luxury watches, and modern streetwear.',
   },
