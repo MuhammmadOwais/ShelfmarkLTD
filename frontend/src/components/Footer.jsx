@@ -191,4 +191,17 @@ const Footer = ({ logoUrl, onPrivacyClick, onTermsClick, onRefundClick, onAboutC
             <span>•</span>
             <a href="/terms-of-service" onClick={(e) => { e.preventDefault(); if (onTermsClick) onTermsClick(); }} className="hover:text-white transition-colors">
               Terms of Service
-        
+            </a>
+            <span>•</span>
+            <a href="/refund-policy" onClick={(e) => { e.preventDefault(); if (onRefundClick) onRefundClick(); }} className="hover:text-white transition-colors">
+              Refund Policy
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;

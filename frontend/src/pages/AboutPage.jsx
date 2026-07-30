@@ -53,14 +53,7 @@ const AboutPage = ({ setView }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/40" />
 
         <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
-          <div className="flex justify-center mb-2">
-            <button
-              onClick={() => setView('shop')}
-              className="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-md transition-all cursor-pointer backdrop-blur-md"
-            >
-              Return to Store
-            </button>
-          </div>
+
 
           <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-300">
             Corporate Profile &amp; Retail Operations
